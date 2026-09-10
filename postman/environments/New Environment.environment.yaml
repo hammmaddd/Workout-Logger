@@ -1,0 +1,17 @@
+name: New Environment
+values:
+  - key: baseUrl
+    value: 'http://localhost:5000'
+    description:
+      content: Base URL for the local Workout Logger API server
+      type: text/plain
+  - key: userId
+    value: ''
+    description:
+      content: MongoDB ObjectId of the user to test with (fill this in after creating a user)
+      type: text/plain
+  - key: workoutId
+    value: ''
+    description:
+      content: MongoDB ObjectId of a workout (auto-filled by the Create Workout request)
+      type: text/plain

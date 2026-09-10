@@ -1,0 +1,40 @@
+$kind: http-request
+method: POST
+url: '{{baseUrl}}/api/v1/users/{{userId}}/workouts'
+order: 3000
+description: Create a new workout for a specific user.
+headers:
+  - key: Content-Type
+    value: application/json
+body:
+  type: json
+  content: |-
+    {
+      "exerciseName": "Bench Press",
+      "sets": 3,
+      "reps": 10,
+      "weight": 80,
+      "weightUnit": "kg",
+      "duration": 45,
+      "notes": "Felt strong today",
+      "difficulty": "medium"
+    }
+scripts:
+  - type: afterResponse
+    language: text/javascript
+    code: |-
+      pm.test("Status is 201", function () {
+        pm.response.to.have.status(201);
+      });
+      pm.test("Workout created successfully", function () {
+        const json = pm.response.json();
+        pm.expect(json.success).to.be.true;
+        pm.expect(json.data).to.have.property("_id");
+      });
+      // Save the new workout ID for use in other requests
+      const json = pm.response.json();
+      if (json.data && json.data._id) {
+        pm.environment.set("workoutId", json.data._id);
+        pm.collectionVariables.set("workoutId", json.data._id);
+        console.log("Saved workoutId:", json.data._id);
+      }

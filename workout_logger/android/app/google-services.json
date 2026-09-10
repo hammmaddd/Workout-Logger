@@ -1,0 +1,90 @@
+{
+  "project_info": {
+    "project_number": "366208969986",
+    "project_id": "workout-logger-270db",
+    "storage_bucket": "workout-logger-270db.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:366208969986:android:0fbea02efc61f7545e261b",
+        "android_client_info": {
+          "package_name": "com.app.workout"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "366208969986-d8oj48pd5vics14ihs4mrho6hintjvet.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB6NqCvbtNBKNKMx7gaQDPQRUGju1pgXp4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "366208969986-d8oj48pd5vics14ihs4mrho6hintjvet.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "366208969986-p8iu5g3enbkmaoou2dudpv0s4p81aj54.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.workoutLogger"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:366208969986:android:1dbeb7a95d5791e75e261b",
+        "android_client_info": {
+          "package_name": "com.example.workout_logger"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "366208969986-8op333bomikd6mh1mf97p4i47q7skrnv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.workout_logger",
+            "certificate_hash": "4df4b4bb16165d96c09e70574582e9a879e0b3e5"
+          }
+        },
+        {
+          "client_id": "366208969986-d8oj48pd5vics14ihs4mrho6hintjvet.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB6NqCvbtNBKNKMx7gaQDPQRUGju1pgXp4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "366208969986-d8oj48pd5vics14ihs4mrho6hintjvet.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "366208969986-p8iu5g3enbkmaoou2dudpv0s4p81aj54.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.workoutLogger"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,39 @@
+$kind: collection
+name: Workout Logger API
+description: |-
+  API collection for the Workout Logger app.
+  Covers health checks, workout CRUD operations, and user stats.
+variables:
+  - key: baseUrl
+    value: http://localhost:5000
+    disabled: false
+  - key: userId
+    value: ""
+    disabled: false
+  - key: workoutId
+    value: ""
+    disabled: false
+  - key: json_web_token_0ala
+    secret: true
+    disabled: false
+  - key: supabase_service_role_api_key_086k
+    secret: true
+    disabled: false
+  - key: json_web_token_0p5n
+    secret: true
+    disabled: false
+  - key: supabase_service_role_api_key_0p5n
+    secret: true
+    disabled: false
+auth:
+  - id: 6a994453-6e1e-449f-ad22-73c05e79c65c
+    type: jwt
+    name: JWT Bearer
+    credentials:
+      algorithm: HS256
+      isSecretBase64Encoded: false
+      payload: "{}"
+      addTokenTo: header
+      headerPrefix: Bearer
+      queryParamKey: token
+      header: "{}"

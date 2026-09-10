@@ -1,0 +1,30 @@
+$kind: http-request
+method: PUT
+url: '{{baseUrl}}/api/v1/workouts/{{workoutId}}'
+order: 5000
+description: Update an existing workout by its ID.
+headers:
+  - key: Content-Type
+    value: application/json
+body:
+  type: json
+  content: |-
+    {
+      "sets": 4,
+      "reps": 12,
+      "weight": 85,
+      "notes": "Increased weight today",
+      "difficulty": "hard"
+    }
+scripts:
+  - type: afterResponse
+    language: text/javascript
+    code: |-
+      pm.test("Status is 200", function () {
+        pm.response.to.have.status(200);
+      });
+      pm.test("Workout updated successfully", function () {
+        const json = pm.response.json();
+        pm.expect(json.success).to.be.true;
+        pm.expect(json.data).to.have.property("_id");
+      });

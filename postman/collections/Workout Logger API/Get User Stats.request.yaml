@@ -1,0 +1,17 @@
+$kind: http-request
+method: GET
+url: '{{baseUrl}}/api/v1/users/{{userId}}/stats'
+order: 6000
+description: Get aggregated workout statistics for a specific user (total workouts, sets, reps, avg weight).
+scripts:
+  - type: afterResponse
+    language: text/javascript
+    code: |-
+      pm.test("Status is 200", function () {
+        pm.response.to.have.status(200);
+      });
+      pm.test("Stats returned", function () {
+        const json = pm.response.json();
+        pm.expect(json.success).to.be.true;
+        pm.expect(json.data).to.have.property("totalWorkouts");
+      });

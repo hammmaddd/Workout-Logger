@@ -1,0 +1,17 @@
+$kind: http-request
+method: DELETE
+url: '{{baseUrl}}/api/v1/workouts/{{workoutId}}'
+order: 7000
+description: Delete a workout by its ID.
+scripts:
+  - type: afterResponse
+    language: text/javascript
+    code: |-
+      pm.test("Status is 200", function () {
+        pm.response.to.have.status(200);
+      });
+      pm.test("Workout deleted successfully", function () {
+        const json = pm.response.json();
+        pm.expect(json.success).to.be.true;
+        pm.expect(json.message).to.include("deleted");
+      });

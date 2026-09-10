@@ -1,0 +1,17 @@
+$kind: http-request
+method: GET
+url: '{{baseUrl}}/api/v1/workouts/{{workoutId}}'
+order: 4000
+description: Get a single workout by its ID.
+scripts:
+  - type: afterResponse
+    language: text/javascript
+    code: |-
+      pm.test("Status is 200", function () {
+        pm.response.to.have.status(200);
+      });
+      pm.test("Workout data returned", function () {
+        const json = pm.response.json();
+        pm.expect(json.success).to.be.true;
+        pm.expect(json.data).to.have.property("_id");
+      });

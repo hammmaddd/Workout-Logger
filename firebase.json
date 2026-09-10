@@ -1,0 +1,20 @@
+{
+  "auth": {
+    "authorizedDomains": [
+      "localhost",
+      "workout-logger-270db.firebaseapp.com",
+      "workout-logger-270db.web.app"
+    ],
+    "providers": {
+      "emailPassword": true,
+      "googleSignIn": {
+        "oAuthBrandDisplayName": "Workout Logger",
+        "supportEmail": "hammadshakoor12@gmail.com"
+      }
+    }
+  },
+  "firestore": {
+    "rules": "firestore.rules",
+    "indexes": "firestore.indexes.json"
+  }
+}
