@@ -279,6 +279,3 @@ Import the collection into Postman and configure the required environment values
 * JWT secrets are configured through environment variables
 * API credentials should never be committed to source control
 
-## License
-
-This project is licensed under the MIT License.
